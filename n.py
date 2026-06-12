@@ -7,11 +7,15 @@ tripulantes = []
 def viajar():
     ##aqui vamos gastar combustivel
     global combustivel ##Avisa que vamos modificar uma variavel externa
-    if(combustivel>=30):
-        combustivel = combustivel - 30
-        print("A nave viajou")
+    if (len(tripulantes)==0):
+        print("Não possui tripulantes na nave, proibido viajar!")
     else:
-        print("Você está sem combustivel suficiente.Abasteça!")
+        if(combustivel>=30):
+            combustivel = combustivel - 30
+            print("A nave viajou")
+        else:
+        
+            print("Você está sem combustivel suficiente.Abasteça!")
 
 def abastecer():
     global combustivel
@@ -34,9 +38,7 @@ def registrarTripulante():
 def tirar():
     tripulantes.pop()
     print("Tripulante retirado")
-
-
-
+  
 ## criar um menu
 
 while True:
