@@ -56,6 +56,8 @@ while True:
         registrar_produto()
     elif (opcao =="4"):
         atualizarEstoque()
- 
+    elif (opcao =="5"):
+     print("Saiu Do Estoque!")
+     break
  
   
