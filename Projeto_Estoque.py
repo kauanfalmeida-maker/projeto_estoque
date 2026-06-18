@@ -1,4 +1,5 @@
 # [id, nome, quantidade, localização]
+## Terassi me ajudou 
 
 estoque = [
 [1, "Amortecedor",3,"Pratileira 01"],
@@ -59,5 +60,6 @@ while True:
     elif (opcao =="5"):
      print("Saiu Do Estoque!")
      break
+    
  
   
