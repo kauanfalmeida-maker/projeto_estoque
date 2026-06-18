@@ -10,7 +10,7 @@ for linha in estoque:
  print(linha)
 
 
-def Mostrar_produtinho():
+def registrar_produto():
     ##Essa funcao pergunta o nome do tripulante e adiciona na lista de tripulantes
     nomeProduto = input("QUAL O NOME DO PRODUTO?: ")
     idProduto = input("QUAL O ID DO PRODUTO?: ")
@@ -21,24 +21,41 @@ def Mostrar_produtinho():
 
 def lista_produtos():
     print("----- PRODUTINHOS -----")
-    print(f"TEMOS {estoque} DISPONIVEL: ")
-    print("-------------------------- \n")
+    for linha in estoque:
+        print(linha)
+
 
 def idProduto():
     idProduto = int(input("QUAL O ID DO PRODUTO:"))
+    linhaProcurada = -1
+    for i in range(len(estoque)):
+        if(estoque[i][0] == idProduto):
+            linhaProcurada = i
+    print(f"O nome procurado é {estoque[linhaProcurada]}")
+
+def atualizarEstoque():
+    idProduto = int(input("QUAL O ID DO PRODUTO?:"))
+    linhaProcurada = -1
+    for i in range(len(estoque)):
+        if(estoque[i][0] == idProduto):
+            linhaProcurada = i
+    
+    print(f"O produto atualizado é {estoque[linhaProcurada]}")
+    quantidade = int(input("QUAL A QUANTIDADE DO PRODUTO?: "))
+    estoque[linhaProcurada][2] = quantidade
 
 while True:
     print("\nBem vindo ao menu do estoque. Por favor selecione uma opção:")
-    print("\n1- lista_produtos | 2- idProduto | 3- Mostrar Produtinho | 4- Atualizar | 5- Sair:")
+    print("\n1- lista_produtos | 2- idProduto | 3- registrar produto | 4- Atualizar | 5- Sair:")
     opcao = input("Escolha: ")
     if (opcao == "1"):
         lista_produtos()
     elif (opcao == "2"):
         idProduto()
     elif (opcao =="3"):
-        Mostrar_produtinho()
+        registrar_produto()
     elif (opcao =="4"):
-        ()
+        atualizarEstoque()
  
  
   
