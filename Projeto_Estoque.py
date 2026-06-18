@@ -60,6 +60,5 @@ while True:
     elif (opcao =="5"):
      print("Saiu Do Estoque!")
      break
-    
  
   
