@@ -2,7 +2,7 @@
 
 Um sistema de estoque simplificado:
 
-FUNCIONALIDADES:
+## FUNCIONALIDADES:
 
 Digite 1 para listar os itens do estoque
 Digite 2 para solicitar o ID do produto, caso ele exista 
